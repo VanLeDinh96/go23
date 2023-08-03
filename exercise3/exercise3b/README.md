@@ -1,5 +1,7 @@
 # Count the Number of Different Integers in a String
 
+![Golang Logo](https://golang.org/doc/gopher/frontpage.png)
+
 This Go package provides a function `NumDifferentIntegers` to count the number of different integers in a given string.
 
 ## Problem Statement
