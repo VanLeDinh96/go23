@@ -1,8 +1,24 @@
-package main
+package cmd
 
 import "fmt"
 
-func countRectangles(rectangles [][]int) int {
+function Execute() {
+	arr := [][]int{
+		{1, 0, 0, 0, 0, 0, 0}, 
+		{0, 0, 0, 0, 0, 0, 0}, 
+		{1, 0, 0, 1, 1, 1, 0}, 
+		{0, 1, 0, 1, 1, 1, 0}, 
+		{0, 1, 0, 0, 0, 0, 0}, 
+		{0, 1, 0, 1, 1, 0, 0}, 
+		{0, 0, 0, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 1},
+	}
+
+	count := CountRectangles(arr)
+	fmt.Printf("%v", count)
+}
+
+func CountRectangles(rectangles [][]int) int {
 	rows := len(rectangles)
 	cols := len(rectangles[0])
 	rectangleCount := 0
@@ -31,20 +47,4 @@ func countRectangles(rectangles [][]int) int {
 	}
 
 	return rectangleCount
-}
-
-func main() {
-	arr := [][]int{
-		{1, 0, 0, 0, 0, 0, 0}, 
-		{0, 0, 0, 0, 0, 0, 0}, 
-		{1, 0, 0, 1, 1, 1, 0}, 
-		{0, 1, 0, 1, 1, 1, 0}, 
-		{0, 1, 0, 0, 0, 0, 0}, 
-		{0, 1, 0, 1, 1, 0, 0}, 
-		{0, 0, 0, 1, 1, 0, 0},
-		{0, 0, 0, 0, 0, 0, 1},
-	}
-
-	count := countRectangles(arr)
-	fmt.Printf("%v", count)
 }
