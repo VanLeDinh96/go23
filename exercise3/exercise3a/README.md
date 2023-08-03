@@ -1,4 +1,4 @@
-# Finding and Counting Number of Rectangles in a 2D Array
+# Find and Count Number of Rectangles in a 2D Array
 
 ![Golang Logo](https://golang.org/doc/gopher/frontpage.png)
 
