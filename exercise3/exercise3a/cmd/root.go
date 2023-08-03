@@ -2,7 +2,7 @@ package cmd
 
 import "fmt"
 
-function Execute() {
+func Execute() {
 	arr := [][]int{
 		{1, 0, 0, 0, 0, 0, 0}, 
 		{0, 0, 0, 0, 0, 0, 0}, 
