@@ -56,4 +56,4 @@ In the provided example grid, there are four rectangles, so the `CountRectangles
 
 **Note:** This is a sample implementation for educational purposes. For production use, it is recommended to handle edge cases and error conditions appropriately.
 
-Please feel free to modify and use this README.md file as needed.
+Please feel free to modify and use this [Readme](README.md) file as needed.
