@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"unicode"
 )
 
-func numDifferentIntegers(word string) int {
+func NumDifferentIntegers(word string) int {
 	uniqueIntegers := make(map[string]bool)
 
 	runes := []rune(word)
@@ -50,8 +50,8 @@ func removeLeadingZeros(s string) string {
 	return s[i:]
 }
 
-func main() {
+func Execute() {
 	word := "a1b01c001"
-	count := numDifferentIntegers(word)
+	count := NumDifferentIntegers(word)
 	fmt.Printf("%v", count)
 }
