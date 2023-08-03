@@ -33,11 +33,14 @@ Testing is a critical aspect of software development. In this module, you will l
 ## Module 5: Scrape a Favorite Website
 
 Web scraping is a powerful skill that allows you to extract data from websites. In this module, you will learn how to scrape a favorite website using Golang. This skill opens up possibilities for gathering information and automating data collection tasks.
+
 Read the step-by-step explanation [here](/exercise5/README.md)
 
 ## Module 6: Product Management - Auth BasicAuth, JWT Auth, and Shopping Cart (Without Auth)
 
 In this comprehensive module, you will delve into product management aspects of a web application. You will learn about implementing Basic Authentication and JWT (JSON Web Tokens) Authentication to secure your application. Additionally, you will work on building a shopping cart feature, both with and without authentication.
+
+Read the step-by-step explanation [here](/exercise6/README.md)
 
 ## Conclusion
 
