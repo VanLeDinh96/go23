@@ -18,9 +18,13 @@ Sorting is a fundamental operation in programming. In this module, you will dive
 
 Working with 2D arrays is common in many applications. In this module, you will tackle the problem of finding and counting the number of rectangles in a given 2D array. This will sharpen your skills in handling multidimensional data and problem-solving.
 
+Read the step-by-step explanation [here](/exercise3/exercise3a/README.md)
+
 ## Module 3b: Count the Number of Different Integers in a String
 
 Strings are an essential part of programming, and knowing how to process them efficiently is valuable. In this module, you will explore a task where you need to count the number of different integers present in a given string. This exercise will improve your string manipulation abilities.
+
+Read the step-by-step explanation [here](/exercise3/exercise3b/README.md)
 
 ## Module 4: Write Unit Tests to Cover the Previous 3 Modules
 
