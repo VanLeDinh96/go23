@@ -39,8 +39,6 @@ The `NumDifferentIntegers` function works as follows:
 
 10. The `removeLeadingZeros` function is another helper function that takes a string `s` and removes any leading zeros from it. If the resulting string becomes empty, it returns "0" to ensure a valid numeric string is always returned.
 
-The provided example string "a1b01c001" contains three different integers: 1, 01 (equivalent to 1), and 001 (equivalent to 1). Thus, the `NumDifferentIntegers` function will return 3.
-
 ---
 
 **Note:** This is a sample implementation for educational purposes. For production use, it is recommended to handle edge cases and error conditions appropriately.
