@@ -24,7 +24,7 @@ arr := [][]int{
 }
 ```
 
-There are four rectangles in this 2D array, and the `CountRectangles` function will return 4.
+There are four rectangles in this 2D array, and the `CountRectangles` function will return 6.
 
 ## Step-by-Step Explanation of `CountRectangles` Function
 
@@ -50,7 +50,7 @@ The `CountRectangles` function works as follows:
 
 10. After iterating over all cells, the function returns the final `rectangleCount`, which represents the number of rectangles in the grid.
 
-In the provided example grid, there are four rectangles, so the `CountRectangles` function will return 4.
+In the provided example grid, there are four rectangles, so the `CountRectangles` function will return 6.
 
 ---
 
