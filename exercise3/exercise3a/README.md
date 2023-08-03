@@ -1,6 +1,5 @@
 Sure! Here's a README.md file that introduces the problem of finding and counting the number of rectangles in a 2D array and provides a step-by-step explanation of the `CountRectangles` function:
 
-````markdown
 # Finding and Counting Number of Rectangles in a 2D Array
 
 This Go package provides a function `CountRectangles` to find and count the number of rectangles formed by adjacent 1s in a 2D grid represented by a 2D slice of integers.
@@ -24,6 +23,7 @@ arr := [][]int{
     {0, 0, 0, 0, 0, 0, 1},
 }
 ```
+
 ````
 
 There are four rectangles in this 2D array, and the `CountRectangles` function will return 4.
@@ -62,3 +62,4 @@ In the provided example grid, there are four rectangles, so the `CountRectangles
 
 Please feel free to modify and use this README.md file as needed.
 ```
+````
