@@ -13,7 +13,7 @@ Consider the following string:
 word := "a1b01c001"
 ```
 
-In this string, there are three different integers: 1, 01 (which is equivalent to 1 after removing leading zeros), and 001 (also equivalent to 1 after removing leading zeros). So, the `NumDifferentIntegers` function will return 3.
+In this string, there is only one identical integer: 1. So, the `NumDifferentIntegers` function will return 1.
 
 ## Step-by-Step Explanation of `NumDifferentIntegers` Function
 
