@@ -22,4 +22,11 @@ func InitializeRoutes(router *gin.Engine) {
 	authGroup := router.Group("/auth")
 	authHandler := handlers.NewAuthHandler()
 	authGroup.POST("/login", authHandler.Login)
+
+	cartGroup := router.Group("/cart")
+	cartGroup.Use(middlewares.JWTMiddleware())
+	cartHandler := handlers.NewCartHandler()
+	cartGroup.POST("/add", cartHandler.AddToCart)
+	cartGroup.POST("/remove", cartHandler.RemoveFromCart)
+	cartGroup.POST("/checkout", cartHandler.Checkout)
 }
