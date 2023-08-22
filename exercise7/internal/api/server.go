@@ -14,7 +14,7 @@ func NewServer() *Server {
 		router: gin.Default(),
 	}
 
-	routes.InitializeRoutes(server.router)s
+	routes.InitializeRoutes(server.router)
 
 	return server
 }

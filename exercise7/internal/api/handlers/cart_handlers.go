@@ -20,7 +20,7 @@ type Product struct {
 
 var cart []Product
 
-func AddToCart(c *gin.Context) {
+func (h *CartHandler) AddToCart(c *gin.Context) {
 	var input struct {
 		ProductID int `json:"product_id"`
 		Quantity  int `json:"quantity"`
@@ -43,7 +43,7 @@ func AddToCart(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Product added to cart"})
 }
 
-func RemoveFromCart(c *gin.Context) {
+func (h *CartHandler) RemoveFromCart(c *gin.Context) {
 	var input struct {
 		ProductID int `json:"product_id"`
 	}
@@ -64,7 +64,7 @@ func RemoveFromCart(c *gin.Context) {
 	c.JSON(http.StatusNotFound, gin.H{"error": "Product not found in cart"})
 }
 
-func Checkout(c *gin.Context) {
+func (h *CartHandler) Checkout(c *gin.Context) {
 	totalPrice := 0
 
 	for _, item := range cart {

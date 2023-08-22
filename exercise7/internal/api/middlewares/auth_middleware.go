@@ -7,7 +7,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"github.com/mitchellh/mapstructure"
-	"github.com/diegovanne/go23/exercise7/internal/api/common"
+	"github.com/diegovanne/go23/exercise7/internal/api/commons"
 	"github.com/diegovanne/go23/exercise7/internal/api/config"
 	"github.com/diegovanne/go23/exercise7/internal/api/handlers"
 )
@@ -37,7 +37,7 @@ func JWTMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		var authJwt common.AuthJWT
+		var authJwt commons.AuthJWT
 		err = mapstructure.Decode(token.Claims, &authJwt)
 		if err != nil {
 			panic(err)
@@ -52,7 +52,7 @@ func BlacklistMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		authorizationHeader := c.GetHeader("Authorization")
 		if authorizationHeader == "" {
-			common.ResponseError(c, http.StatusUnauthorized, "Missing Authorization header", nil)
+			commons.ResponseError(c, http.StatusUnauthorized, "Missing Authorization header", nil)
 			c.Abort()
 			return
 		}
@@ -61,7 +61,7 @@ func BlacklistMiddleware() gin.HandlerFunc {
 		token := tokenParts[0]
 
 		if handlers.TokenBlacklist[token] {
-			common.ResponseError(c, http.StatusUnauthorized, "Token revoked", nil)
+			commons.ResponseError(c, http.StatusUnauthorized, "Token revoked", nil)
 			c.Abort()
 			return
 		}

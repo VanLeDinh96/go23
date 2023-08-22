@@ -31,7 +31,7 @@ func (h *ProductHandler) CreateProduct(c *gin.Context) {
 		Name:     input.Name,
 		Price:    input.Price,
 		Quantity: input.Quantity,
-		CreatedById: user.ID,
+		UserID: user.ID,
 	}
 
 	if err := database.DB.Create(&product).Error; err != nil {
@@ -50,7 +50,7 @@ func (h *ProductHandler) CreateProduct(c *gin.Context) {
 
 func (h *ProductHandler) UpdateProduct(c *gin.Context) {
 	productID := c.Param("product_id")
-	var updatedProduct entities.Product
+	var updatedProduct inputs.UpdateProductInput
 	if err := c.ShouldBindJSON(&updatedProduct); err != nil {
 		commons.ResponseError(c, http.StatusBadRequest, "Invalid request payload", commons.ParseError(err))
 		return
@@ -64,20 +64,16 @@ func (h *ProductHandler) UpdateProduct(c *gin.Context) {
 
 	product.Name = updatedProduct.Name
 	product.Price = updatedProduct.Price
+	product.Quantity = updatedProduct.Quantity
 
 	if err := database.DB.Save(&product).Error; err != nil {
 		commons.ResponseError(c, http.StatusInternalServerError, "Failed to update product", nil)
 		return
 	}
 
-	result := struct {
-		ID uint `json:"id"`
-	}{
-		ID: product.ID,
-	}
-
-	commons.ResponseSuccess(c, http.StatusOK, "Product was updated successfully", result)
+	c.JSON(http.StatusOK, product)
 }
+
 
 func (h *ProductHandler) DeleteProduct(c *gin.Context) {
 	productID := c.Param("product_id")

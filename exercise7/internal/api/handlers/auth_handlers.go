@@ -10,6 +10,7 @@ import (
 	"github.com/diegovanne/go23/exercise7/internal/api/inputs"
 	"github.com/diegovanne/go23/exercise7/internal/api/entities"
 	"github.com/diegovanne/go23/exercise7/internal/api/database"
+	"github.com/diegovanne/go23/exercise7/internal/constants/role_enums"
 	"github.com/diegovanne/go23/exercise7/internal/api/commons"
 	"github.com/diegovanne/go23/exercise7/internal/api/config"
 )
@@ -65,7 +66,7 @@ func (h *AuthHandler) Login(c *gin.Context) {
 		Token string `json:"token"`
 		Name string `json:"name"`
 		Email string `json:"email"`
-		Role int `json:"role"`
+		Role role_enums.UserRole `json:"role"`
 	}{
 		Token: tokenString,
 		Name: user.Name,
@@ -177,7 +178,7 @@ func (h *AuthHandler) GetProfile(c *gin.Context) {
 	response := struct {
 		Name string `json:"name"`
 		Email string `json:"email"`
-		Role int `json:"role"`
+		Role role_enums.UserRole `json:"role"`
 	}{
 		Name: dbUser.Name,
 		Email: dbUser.Email,
@@ -225,7 +226,7 @@ func (h* AuthHandler) ValidateToken(c *gin.Context) {
 	response := struct {
 		Name string `json:"name"`
 		Email string `json:"email"`
-		Role int `json:"role"`
+		Role role_enums.UserRole `json:"role"`
 	}{
 		Name: dbUser.Name,
 		Email: dbUser.Email,
