@@ -3,10 +3,10 @@ package handlers
 import (
 	"net/http"
 	"github.com/gin-gonic/gin"
-	"github.com/diegovanne/go23/exercise7/internal/api/inputs"
-	"github.com/diegovanne/go23/exercise7/internal/api/entities"
-	"github.com/diegovanne/go23/exercise7/internal/api/commons"
-	"github.com/diegovanne/go23/exercise7/internal/api/database"
+	"github.com/diegovanne/go23/exercise8/internal/api/inputs"
+	"github.com/diegovanne/go23/exercise8/internal/api/entities"
+	"github.com/diegovanne/go23/exercise8/internal/api/commons"
+	"github.com/diegovanne/go23/exercise8/internal/api/database"
 	"gorm.io/gorm"
 )
 

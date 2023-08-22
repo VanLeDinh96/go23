@@ -3,8 +3,8 @@ package routes
 import (
 	"net/http"
 	"github.com/gin-gonic/gin"
-	"github.com/diegovanne/go23/exercise7/internal/api/handlers"
-	"github.com/diegovanne/go23/exercise7/internal/api/middlewares"
+	"github.com/diegovanne/go23/exercise8/internal/api/handlers"
+	"github.com/diegovanne/go23/exercise8/internal/api/middlewares"
 )
 
 func InitializeRoutes(router *gin.Engine) {
@@ -46,7 +46,7 @@ func InitializeRoutes(router *gin.Engine) {
 	cartGroup := backOfficeGroup.Group("/cart")
 	{
 		cartGroup.POST("/add", cartHandler.AddToCart)
-		cartGroup.DELETE("/remove/:cart_id", cartHandler.RemoveFromCart)
+		cartGroup.POST("/remove", cartHandler.RemoveFromCart)
 		cartGroup.POST("/checkout", cartHandler.Checkout)
 	}
 }
